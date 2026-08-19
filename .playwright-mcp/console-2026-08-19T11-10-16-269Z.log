@@ -1,0 +1,3 @@
+[     147ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.saucedemo.com/:0
+[    8229ms] [ERROR] Access to fetch at 'https://submit.backtrace.io/UNIVERSE/TOKEN/json' from origin 'https://www.saucedemo.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://www.saucedemo.com/:0
+[    8229ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://submit.backtrace.io/UNIVERSE/TOKEN/json:0

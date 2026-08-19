@@ -1,0 +1,17 @@
+- generic [ref=f4e3]:
+  - generic [ref=f4e4]: Swag Labs
+  - generic [ref=f4e5]:
+    - generic [ref=f4e9]:
+      - textbox "Username" [ref=f4e11]
+      - textbox "Password" [ref=f4e13]: secret_sauce
+      - heading [level=3] [ref=f4e26]:
+        - button [ref=f4e27] [cursor=pointer]
+        - text: "Epic sadface: Username is required"
+      - button "Login" [active] [ref=f4e15] [cursor=pointer]
+    - generic [ref=f4e17]:
+      - generic [ref=f4e18]:
+        - heading "Accepted usernames are:" [level=4] [ref=f4e19]
+        - text: standard_userlocked_out_userproblem_userperformance_glitch_usererror_uservisual_user
+      - generic [ref=f4e20]:
+        - heading "Password for all users:" [level=4] [ref=f4e21]
+        - text: secret_sauce

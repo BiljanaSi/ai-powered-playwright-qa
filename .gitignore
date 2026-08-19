@@ -3,3 +3,7 @@ test-results/
 playwright-report/
 !package.json
 !package-lock.jsonallure-report/
+
+# Allure reports
+allure-results/
+allure-report/

@@ -187,3 +187,29 @@ The goal of this project is to demonstrate practical usage of AI agents in moder
 Instead of using AI only to generate code, the project demonstrates an AI-assisted workflow covering:
 
 Plan → Generate → Refactor → Execute → Diagnose → Heal → Verify
+
+# All tests
+npx playwright test
+
+# Smoke
+npx playwright test --grep @smoke --project=chromium
+
+# Regression
+npx playwright test --grep @regression --project=chromium
+
+# Inventory
+npx playwright test tests/inventory --project=chromium
+
+# Cart
+npx playwright test tests/cart --project=chromium
+
+# Checkout
+npx playwright test tests/checkout --project=chromium
+
+| Module    | Smoke | Regression |
+| --------- | ----: | ---------: |
+| Login     |     — |          — |
+| Inventory |     4 |          5 |
+| Cart      |     — |          — |
+| Checkout  |     3 |          6 |
+| **Total** | **9** |     **16** |

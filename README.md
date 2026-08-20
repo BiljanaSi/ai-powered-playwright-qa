@@ -71,23 +71,21 @@ The login test suite covers:
 
 ## Test Results
 
-Current login suite:
+Current automated test suite:
 
 ```text
-18 test files
+42 test files
 3 browsers
-54 test executions
-54 passed
+126 test executions
 
 Browsers:
+- Chromium
+- Firefox
+- WebKit
 
-Chromium
-Firefox
-WebKit
 
-Project Structure
+
 ## Project Structure
-
 ```text
 ai-powered-playwright-qa/
 ├── .github/
@@ -100,34 +98,29 @@ ai-powered-playwright-qa/
 │   ├── CartPage.js
 │   └── CheckoutPage.js
 │
+├── test-data/
+│   ├── users.js
+│   └── checkout-data.js
+│
 ├── tests/
 │   ├── login-functionality/
-│   │   ├── tc-001-successful-login-standard-user.spec.js
-│   │   ├── tc-002-successful-login-problem-user.spec.js
-│   │   ├── ...
-│   │   └── tc-017-error-user.spec.js
+│   │   ├── tc-001-*.spec.js
+│   │   └── ...
 │   │
 │   ├── inventory/
-│   │   ├── tc-022-inventory-page-loads-after-successful-login.spec.js
-│   │   ├── tc-023-products-are-displayed.spec.js
-│   │   ├── tc-024-product-contains-required-information.spec.js
-│   │   ├── tc-025-add-product-to-cart.spec.js
-│   │   └── tc-026-cart-badge-increments.spec.js
+│   │   ├── tc-022-*.spec.js
+│   │   ├── ...
+│   │   └── tc-041-*.spec.js
 │   │
 │   ├── cart/
-│   │   ├── tc-027-add-single-product-to-cart.spec.js
-│   │   ├── tc-028-add-multiple-products-to-cart.spec.js
-│   │   ├── tc-029-remove-product-from-cart.spec.js
-│   │   ├── tc-030-continue-shopping-from-cart.spec.js
-│   │   └── tc-031-cart-displays-prices-and-totals.spec.js
+│   │   ├── tc-027-*.spec.js
+│   │   ├── ...
+│   │   └── tc-031-*.spec.js
 │   │
 │   ├── checkout/
-│   │   ├── tc-032-navigate-to-checkout.spec.js
-│   │   ├── tc-033-complete-checkout-with-valid-info.spec.js
-│   │   ├── tc-034-first-name-required.spec.js
-│   │   ├── tc-035-last-name-required.spec.js
-│   │   ├── tc-036-postal-code-required.spec.js
-│   │   └── tc-037-checkout-overview-displays-items-and-totals.spec.js
+│   │   ├── tc-032-*.spec.js
+│   │   ├── ...
+│   │   └── tc-037-*.spec.js
 │   │
 │   ├── example.spec.js
 │   └── home-page.spec.js
@@ -229,9 +222,19 @@ npx playwright test tests/cart --project=chromium
 npx playwright test tests/checkout --project=chromium
 
 | Module    | Smoke | Regression |
-| --------- | ----: | ---------: |
-| Login     |     — |          — |
-| Inventory |     4 |          5 |
-| Cart      |     — |          — |
+|-----------|------:|-----------:|
+| Login     |     4 |         18 |
+| Inventory |     4 |          9 |
+| Cart      |     2 |          5 |
 | Checkout  |     3 |          6 |
-| **Total** | **9** |     **16** |
+| **Total** | **13** |     **38** |
+
+Smoke tests:
+- 13 tests
+- 39 browser executions across Chromium, Firefox and WebKit
+- 39 passed
+
+Regression tests:
+- 38 tests
+- 114 browser executions across Chromium, Firefox and WebKit
+- 114 passed

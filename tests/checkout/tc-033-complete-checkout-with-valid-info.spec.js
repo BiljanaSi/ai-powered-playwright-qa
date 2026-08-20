@@ -6,6 +6,8 @@ const { LoginPage } = require('../../pages/LoginPage');
 const { InventoryPage } = require('../../pages/InventoryPage');
 const { CartPage } = require('../../pages/CartPage');
 const { CheckoutPage } = require('../../pages/CheckoutPage');
+const { users } = require('../../test-data/users');
+const { checkoutData } = require('../../test-data/checkout-data');
 
 test.describe('Checkout Functionality', () => {
   test('@smoke @regression TC-033: Complete checkout with valid information', async ({ page }) => {
@@ -16,7 +18,7 @@ test.describe('Checkout Functionality', () => {
 
     // Setup: Login and add product to cart
     await loginPage.open();
-    await loginPage.login('standard_user', 'secret_sauce');
+    await loginPage.login(users.standard.username, users.standard.password);
     await inventoryPage.addFirstProduct();
 
     // Navigate to cart and checkout
@@ -25,7 +27,11 @@ test.describe('Checkout Functionality', () => {
     await expect(page).toHaveURL(/\/checkout-step-one\.html$/);
 
     // Enter checkout information
-    await checkoutPage.enterCheckoutInfo('John', 'Doe', '12345');
+    await checkoutPage.enterCheckoutInfo(
+   checkoutData.validCustomer.firstName,
+   checkoutData.validCustomer.lastName,
+   checkoutData.validCustomer.postalCode
+);
     await checkoutPage.continueToOverview();
 
     // Verify overview page

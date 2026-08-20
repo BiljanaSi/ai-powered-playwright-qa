@@ -6,6 +6,7 @@ const { LoginPage } = require('../../pages/LoginPage');
 const { InventoryPage } = require('../../pages/InventoryPage');
 const { CartPage } = require('../../pages/CartPage');
 const { CheckoutPage } = require('../../pages/CheckoutPage');
+const { users } = require('../../test-data/users');
 
 test.describe('Checkout Functionality', () => {
   test('@smoke @regression TC-032: Navigate to checkout with product in cart', async ({ page }) => {
@@ -16,7 +17,7 @@ test.describe('Checkout Functionality', () => {
 
     // Setup: Login and add product to cart
     await loginPage.open();
-    await loginPage.login('standard_user', 'secret_sauce');
+    await loginPage.login(users.standard.username, users.standard.password);
     await inventoryPage.addFirstProduct();
 
     // Navigate to cart

@@ -5,7 +5,7 @@ const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pages/LoginPage');
 
 test.describe('Login Functionality Test Suite', () => {
-  test('TC-001: Successful Login with Valid Credentials - Standard User', async ({ page }) => {
+  test('@smoke @regression TC-001: Successful Login with Valid Credentials - Standard User', async ({ page }) => {
     const loginPage = new LoginPage(page);
 
     // Navigate to https://www.saucedemo.com/

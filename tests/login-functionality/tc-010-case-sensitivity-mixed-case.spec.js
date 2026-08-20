@@ -5,7 +5,7 @@ const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pages/LoginPage');
 
 test.describe('Login Functionality Test Suite', () => {
-  test('TC-010: Mixed Case Username Test', async ({ page }) => {
+  test('@regressionTC-010: Mixed Case Username Test', async ({ page }) => {
     const loginPage = new LoginPage(page);
 
     // Navigate to https://www.saucedemo.com/

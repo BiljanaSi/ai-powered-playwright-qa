@@ -5,7 +5,7 @@ const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pages/LoginPage');
 
 test.describe('Login Functionality Test Suite', () => {
-  test('TC-015: Error Message Dismissal - Close Button on Error Message', async ({ page }) => {
+  test('@regression TC-015: Error Message Dismissal - Close Button on Error Message', async ({ page }) => {
     const loginPage = new LoginPage(page);
 
     // Navigate to https://www.saucedemo.com/

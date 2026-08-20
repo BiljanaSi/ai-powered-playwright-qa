@@ -6,7 +6,7 @@ const { LoginPage } = require('../../pages/LoginPage');
 const { InventoryPage } = require('../../pages/InventoryPage');
 
 test.describe('Inventory Page', () => {
-  test('TC-023: Products are displayed', async ({ page }) => {
+  test('@smoke @regression TC-023: Products are displayed', async ({ page }) => {
     const loginPage = new LoginPage(page);
     const inventoryPage = new InventoryPage(page);
 

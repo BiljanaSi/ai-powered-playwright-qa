@@ -8,7 +8,7 @@ const { CartPage } = require('../../pages/CartPage');
 const { CheckoutPage } = require('../../pages/CheckoutPage');
 
 test.describe('Checkout Functionality', () => {
-  test('TC-034: Checkout validation - first name is required', async ({ page }) => {
+  test('@regression TC-034: Checkout validation - first name is required', async ({ page }) => {
     const loginPage = new LoginPage(page);
     const inventoryPage = new InventoryPage(page);
     const cartPage = new CartPage(page);

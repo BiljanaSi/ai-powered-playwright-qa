@@ -8,7 +8,7 @@ const { CartPage } = require('../../pages/CartPage');
 const { CheckoutPage } = require('../../pages/CheckoutPage');
 
 test.describe('Cart Functionality', () => {
-  test('TC-031: Cart displays product prices and calculates totals', async ({ page }) => {
+  test('@smoke @regression TC-031: Cart displays product prices and calculates totals', async ({ page }) => {
     const loginPage = new LoginPage(page);
     const inventoryPage = new InventoryPage(page);
     const cartPage = new CartPage(page);

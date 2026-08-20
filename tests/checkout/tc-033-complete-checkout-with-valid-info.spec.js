@@ -8,7 +8,7 @@ const { CartPage } = require('../../pages/CartPage');
 const { CheckoutPage } = require('../../pages/CheckoutPage');
 
 test.describe('Checkout Functionality', () => {
-  test('TC-033: Complete checkout with valid information', async ({ page }) => {
+  test('@smoke @regression TC-033: Complete checkout with valid information', async ({ page }) => {
     const loginPage = new LoginPage(page);
     const inventoryPage = new InventoryPage(page);
     const cartPage = new CartPage(page);

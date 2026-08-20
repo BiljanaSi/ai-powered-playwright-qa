@@ -7,7 +7,7 @@ const { InventoryPage } = require('../../pages/InventoryPage');
 const { CartPage } = require('../../pages/CartPage');
 
 test.describe('Cart Functionality', () => {
-  test('TC-027: Add single product to cart and verify in cart page', async ({ page }) => {
+  test('@smoke @regression TC-027: Add single product to cart and verify in cart page', async ({ page }) => {
     const loginPage = new LoginPage(page);
     const inventoryPage = new InventoryPage(page);
     const cartPage = new CartPage(page);

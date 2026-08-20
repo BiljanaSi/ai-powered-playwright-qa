@@ -6,7 +6,7 @@ const { LoginPage } = require('../../pages/LoginPage');
 const { InventoryPage } = require('../../pages/InventoryPage');
 
 test.describe('Inventory Page', () => {
-  test('TC-026: Cart badge increments', async ({ page }) => {
+  test('@smoke @regression TC-026: Cart badge increments', async ({ page }) => {
     const loginPage = new LoginPage(page);
     const inventoryPage = new InventoryPage(page);
 

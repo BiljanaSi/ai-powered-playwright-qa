@@ -1,5 +1,7 @@
 # AI-Powered Playwright QA
 
+[![Playwright Tests](https://github.com/BiljanaSi/ai-powered-playwright-qa/actions/workflows/playwright.yml/badge.svg)](https://github.com/BiljanaSi/ai-powered-playwright-qa/actions/workflows/playwright.yml)
+
 AI-assisted end-to-end test automation project built with Playwright.
 
 This project demonstrates how AI agents can support the complete QA automation lifecycle — from test planning and test generation to refactoring, execution, and automated test healing.
